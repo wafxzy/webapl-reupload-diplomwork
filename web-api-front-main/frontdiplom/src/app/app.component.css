@@ -1,0 +1,24 @@
+
+.navbar {
+    background-color: rgba(182, 61, 61, 0) !important;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    transition-duration: ease-in-out;
+    color: white;
+  }
+  
+  .navbar-dark {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: #ffffff !important;
+  }
+  .logonav{ height: 40px;
+    color: #ffffff;
+    background-image: url('../logo.ico');
+    width: 40px;
+  }
+  .travellogospan{
+color: #85dd01;
+  }
+  .copyrights{
+    padding-left: 50px;
+  }

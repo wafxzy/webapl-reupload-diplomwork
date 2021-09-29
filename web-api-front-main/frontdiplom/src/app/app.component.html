@@ -1,0 +1,97 @@
+ <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark text-white   p-md-3">
+  <div class="container">
+    <a href="#"  routerLink="/home" class="navbar-brand text-white "> <img class="logonav" src="../logo.ico" height="40px" width="40px"  alt=""> <span class="travellogospan">TRAVEL</span><span class="Mindnavfoot">MIND</span></a>
+    <button 
+  
+      type="button" 
+      class="navbar-toggler"
+      data-bs-target="#navbarNav"
+      data-bs-toggle="collapse" 
+      aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle Navbar" >
+    <span  class="navbar-toggler-icon  " ><i class="fa fa-bars" style="color: white;"></i></span></button>
+  <div class="collapse navbar-collapse text-white"  id="navbarNav" >
+ <div class="mx-auto"></div>
+    <ul class="navbar-nav" >
+      <li class="nav-item">
+        <a href="#" routerLink="/asiatours" class="nav-link text-white">Туры</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white">Контакты</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white">Отзывы</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white">Регистрация</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link text-white">Войти</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+<!--nav-->
+<!--nav script-->
+<script>
+  document.onreadystatechange = function() {
+ let lastScrollPosition = 0;
+ const navbar = document.querySelector('.navbar');
+ window.addEventListener('scroll', function(e) {
+   lastScrollPosition = window.scrollY;
+   
+   if (lastScrollPosition > 150)
+     navbar.classList.add('navbar-dark');
+   else
+     navbar.classList.remove('navbar-dark');
+ });
+}
+</script>
+<router-outlet></router-outlet>
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i  class="fa fa-linkedin"  aria-hidden="true"></i></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fa fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    
+   <img class="logofoot" src="../logo.ico" height="60px" width="60px"  alt=""><span class="travellogospan" >TRAVEL</span><span class="Mindnavfoot">MIND</span>
+        <span class="copyrights">©2021 Copyright:TRAVELMIND Все права Защищены</span> 
+  </div>
+  <!-- Copyright -->
+</footer>
