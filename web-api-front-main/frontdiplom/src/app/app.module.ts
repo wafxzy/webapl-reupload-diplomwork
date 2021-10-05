@@ -18,13 +18,13 @@ import { AlltoursComponent } from './alltours/alltours.component';
 import {SharedService} from './shared.service';
 
 
-
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserReviewsComponent } from './user-reviews/user-reviews.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HelpinfoComponent,
     AlltoursComponent,
     HomeComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    UserReviewsComponent
   ],
   imports: [
     BrowserModule,

@@ -14,8 +14,9 @@ import {HelpinfoComponent} from './helpinfo/helpinfo.component';
 import {RegisterComponent} from './register/register.component';
 import{HomeComponent} from './home/home.component';
 import{LoginComponent} from './login/login.component';
-import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component'
-
+import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
+import {UserReviewsComponent} from './user-reviews/user-reviews.component';
+import {AuthService} from './guards/auth.service'
 const routes: Routes = [
 {path:'asiatours', component:AsiatoursComponent  },
 {path:'alltours', component:AlltoursComponent  },
@@ -28,7 +29,9 @@ const routes: Routes = [
 {path:'helpinfo', component:HelpinfoComponent  },
 {path:'register', component:RegisterComponent  },
 {path:'tour/:id', component:ToulookComponent  },
-{path: "home",  component: HomeComponent}
+{path: "home",  component: HomeComponent},
+{path: "reviews",  component: UserReviewsComponent,  canActivate: [AuthService]},
+{path: "login",  component: LoginComponent}
 ];
 
 @NgModule({
