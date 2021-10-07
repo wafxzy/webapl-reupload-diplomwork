@@ -1,6 +1,5 @@
 .parallax-image {
-    background-image: url(https://sun9-8.userapi.com/impg/c855032/v855032209/215430/guqNgJYodH8.jpg?size=937x937&quality=96&sign=400b6a1eb37321ca282a486418cd873f&type=album);
-    height: 45vh;
+     height: 45vh;
     width: 100%;
     text-align:center;
     background-attachment: fixed;
@@ -8,4 +7,49 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-      
+ngb-carousel {
+    width: 100%;
+    height: 80vh;
+    }
+    
+    ngb-carousel img {
+      width: 100%;
+      height: 80vh;
+      outline: none;
+    }
+    
+    ngb-carousel {
+      width: inherit;
+      height: inherit;
+    }
+    
+    .carousel-inner {
+      overflow: visible;
+    }
+    
+    .carousel-item {
+      display: flex !important;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 1.2s ease-in-out, visibility 1.2s;
+      z-index: -1;
+    }
+    
+    .carousel-item.active{
+      opacity: 1;
+      visibility: visible;
+      z-index: 10;
+    }
+    
+    .carousel-control-prev {
+       z-index: 20;
+    }
+    
+    
+    .carousel-control-next {
+       z-index: 20;
+    }
+    
+    .carousel-indicators{
+      z-index: 20;
+    }

@@ -1,14 +1,48 @@
-<div class="parallax-image justify-content-center">
+<div *ngFor="let dataitem of tour"  style="background-image:URL({{dataitem.photo1}}) ;" class="parallax-image justify-content-center">
     <div class="row h-100 w-100">
         <div class="col w-100 col-xl-12 align-self-center">
-            <h1 class="text-center text-white ">Any Questions?</h1>
+            <h1 class="text-center text-white " style="padding-right: 35%;">{{dataitem.title}}</h1>
+            <h2 class="text-center text-white " style="padding-right: 35%;">{{dataitem.stars}} <i class="fa fa-star" aria-hidden="true"></i>Tour</h2>
+       
         </div>
     </div>
 </div>
+<div class="container text-center">
 <div class="row">
-    <div class="col sm=12" *ngFor="let dataitem of tour">
-        <a routerLink="/tour/{{dataitem.id_t}}" href="#">{{dataitem.id_t}}</a>
-        <a href="">{{dataitem.title}}</a>
-           
-    </div>
+    <div class="col sm=12" *ngFor="let dataitem of tour"  >
+       <h3>Информация о туре </h3>
+           <p>{{dataitem.description_t}}</p>
+           <h3>Цена Данного Тура  </h3>
+           <h4>{{dataitem.price}}  <i class="fa fa-dollar" aria-hidden="true"></i></h4>
+    </div>   
+</div>
+<ngb-carousel [animation]="true" [interval]="5000"  *ngFor="let dataitem of tour" >
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper ">
+        <img class="img" style="height: 80vh; width:100%;" src="{{dataitem.photo1}}" alt="Angular Carousel 1">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper ">
+          <img class="img" src="{{dataitem.photo2}}" alt="Angular Carousel 1">
+        </div>
+      </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img  src="{{dataitem.photo3}}" alt="Angular Carousel 2">
+      </div>
+     
+    </ng-template>
+  </ngb-carousel>
+  <h3>Понравился тур?</h3>
+  <button type="button" *ngIf="isUserlogin" class="btn btn-success btn-lg btn-block">Заказать Данный тур </button>
+  <br>
+  <br>
+</div>
+<div class="container-fluid text-center" style="background-color: greenyellow;">
+    <h2> Есть воппосы? Свяждитесь с Нами! </h2>
+    <button type="button" class="btn btn-outline-success btn-lg btn-block">Связатся</button>
+<br>
+<br>
+    
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SharedService } from '../shared.service';
+import { Constants } from '../Helper/constants';
 @Component({
   selector: 'app-toulook',
   templateUrl: './toulook.component.html',
@@ -18,6 +19,11 @@ tour:any;
       this.id=params.get('id');
     });
     this.getTourById(this.id);
+  }
+  
+  get isUserlogin() {
+    const user = localStorage.getItem(Constants.USER_KEY);
+    return user && user.length > 0;
   }
 getTourById(id:any){
   this.tourService.getTourCurrentList(id).subscribe((res)=>{
