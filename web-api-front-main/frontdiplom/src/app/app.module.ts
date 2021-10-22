@@ -25,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserReviewsComponent } from './user-reviews/user-reviews.component';
+import { BuytourComponent } from './buytour/buytour.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { UserReviewsComponent } from './user-reviews/user-reviews.component';
     AlltoursComponent,
     HomeComponent,
     PagenotfoundComponent,
-    UserReviewsComponent
+    UserReviewsComponent,
+    BuytourComponent
   ],
   imports: [
     BrowserModule,

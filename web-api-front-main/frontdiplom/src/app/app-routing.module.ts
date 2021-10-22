@@ -17,6 +17,7 @@ import{LoginComponent} from './login/login.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 import {UserReviewsComponent} from './user-reviews/user-reviews.component';
 import {AuthService} from './guards/auth.service'
+import{BuytourComponent} from './buytour/buytour.component';
 const routes: Routes = [
 {path:'asiatours', component:AsiatoursComponent  },
 {path:'alltours', component:AlltoursComponent  },
@@ -31,7 +32,8 @@ const routes: Routes = [
 {path:'tour/:id', component:ToulookComponent  },
 {path: "home",  component: HomeComponent},
 {path: "reviews",  component: UserReviewsComponent,  canActivate: [AuthService]},
-{path: "login",  component: LoginComponent}
+{path: "login",  component: LoginComponent},
+{path: "requesttour",  component: BuytourComponent}
 ];
 
 @NgModule({

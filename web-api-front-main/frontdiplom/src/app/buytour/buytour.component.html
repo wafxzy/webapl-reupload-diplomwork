@@ -1,0 +1,68 @@
+<div class="container-fluid" style="background-image:url(https://sun9-50.userapi.com/impg/1ikyQIZOoBYhB3SyWze7nRwLr6n0-nP9SeBIJg/ArCRju8o3hQ.jpg?size=1800x1080&quality=96&sign=1420fbd0dc8f03cd06dd7e5fa0c0b091&type=album);background-repeat: no-repeat; background-size: cover;">
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+
+
+<div class="container-fluid" >
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <div class="card">
+          <form [formGroup]="requestForm" (ngSubmit)="onSubmit()">
+            <div class="card-body">
+              <h5 class="card-title text-center">Request Tour</h5>
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">FullName</label>
+                <div class="col-sm-10">
+                  <input type="text" formControlName="fullName" class="form-control" id="staticEmail" value="">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Adress</label>
+                <div class="col-sm-10">
+                  <input type="text" formControlName="adress" class="form-control" id="staticAdress" value="">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">PHONENUMBER</label>
+                <div class="col-sm-10">
+                  <input type="text" formControlName="phonenumber" class="form-control" id="staticPhonenumber" value="">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">People</label>
+                <div class="col-sm-10">
+                  <input type="text" formControlName="people" class="form-control" id="inputPeople">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">prefered tour</label>
+                <div class="col-sm-10">
+                  <input type="text" formControlName="tourname" class="form-control" id="inputTourname">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" >send</button>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br>
+</div>

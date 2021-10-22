@@ -12,6 +12,7 @@ import { Constants } from '../Helper/constants';
 
 export class UserService {
    private readonly baseURL:string="http://localhost:36881/api/user/"
+   private readonly baseTourURL:string="http://localhost:36881/api/BuyTour/"
   constructor(private httpClient:HttpClient) { }
 
    public login(email:string , password:string)
@@ -32,6 +33,19 @@ export class UserService {
        Password:password
      }
     return this.httpClient.post<ResponseModel>(this.baseURL+"RegisterUser",body);
+   }
+
+   public sendtour(fullname:string,adress:string , phonenumber:number, people:number, tourname:string)
+   {
+
+     const body={
+       FullName:fullname,
+       Adress:adress,
+       Phonenumber:phonenumber,
+       People:people,
+       Tourname:tourname
+     }
+    return this.httpClient.post<ResponseModel>(this.baseTourURL+"SendRequest",body);
    }
 
    public getAllUser()
