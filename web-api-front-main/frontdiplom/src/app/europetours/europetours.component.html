@@ -1,1 +1,62 @@
-<p>europetours works!</p>
+<div class="parallax-image justify-content-center">
+    <div class="row h-100 w-100">
+        <div class="col w-100 col-xl-12 align-self-center">
+            <h1 class="text-center text-white ">Tours</h1>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container h-100">
+    <div class="row " >
+      <div class="col-md-9">
+          
+      
+            <div class="card mb-12" style="max-width: 540px;" *ngFor="let dataitem of AsiatoursList  | paginate: { itemsPerPage: 5, currentPage: page, totalItems:totallenght }">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{{dataitem.photo1}}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">   {{dataitem.title}}</h5>
+                      <p class="card-text">{{dataitem.price}}$</p>
+                      <p class="card-text"><small class="text-muted">{{dataitem.stars}}<i class="fa fa-star" aria-hidden="true"></i></small></p>
+                   <button class="btn btn-primary text-white" >  <a  routerLink="/tour/{{dataitem.id_t}}" href="#">Info</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+       
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+    <div class="col-md-3" >
+      <div class="container text-center" style="background-image:url(https://sun9-12.userapi.com/impg/nMoJCeQmGa81CUmfttrjrQRM-B7r_hmaxDgonw/daSdNIwS9TY.jpg?size=604x604&quality=96&sign=05d74aafdd6bc896a69775eae0e61684&type=album) ; padding:20px 0px 10px 0px;">
+        <a href="" routerLink="/europetours">  <h2 class="card-title  text-center ">Europe</h2></a>
+      
+      </div>
+      <div class="container text-center" style="background-image:url(https://sun9-12.userapi.com/impg/nMoJCeQmGa81CUmfttrjrQRM-B7r_hmaxDgonw/daSdNIwS9TY.jpg?size=604x604&quality=96&sign=05d74aafdd6bc896a69775eae0e61684&type=album) ; padding:20px 0px 10px 0px;">
+        <a href="" routerLink="/asiatours">  <h2 class="card-title  text-center ">Asia</h2></a>
+      
+      </div>
+      <div class="container text-center" style="background-image:url(https://sun9-12.userapi.com/impg/nMoJCeQmGa81CUmfttrjrQRM-B7r_hmaxDgonw/daSdNIwS9TY.jpg?size=604x604&quality=96&sign=05d74aafdd6bc896a69775eae0e61684&type=album) ; padding:20px 0px 10px 0px;">
+        <a href="" routerLink="/africatours">  <h2 class="card-title  text-center ">Africa</h2></a>
+      
+      </div>
+      <div class="container text-center"style="background-image:url(https://sun9-12.userapi.com/impg/nMoJCeQmGa81CUmfttrjrQRM-B7r_hmaxDgonw/daSdNIwS9TY.jpg?size=604x604&quality=96&sign=05d74aafdd6bc896a69775eae0e61684&type=album) ; padding:20px 0px 10px 0px;">
+        <a href="" routerLink="/northamericatours">  <h2 class="card-title  text-center ">North America</h2></a>
+      
+      </div>
+      <div class="container text-center"style="background-image:url(https://sun9-12.userapi.com/impg/nMoJCeQmGa81CUmfttrjrQRM-B7r_hmaxDgonw/daSdNIwS9TY.jpg?size=604x604&quality=96&sign=05d74aafdd6bc896a69775eae0e61684&type=album) ; padding:20px 0px 10px 0px;">
+        <a href="" routerLink="/southamericatours">  <h2 class="card-title  text-center ">South America</h2></a>
+      
+      </div>
+      <div class="container text-center"style="background-image:url(https://sun9-12.userapi.com/impg/nMoJCeQmGa81CUmfttrjrQRM-B7r_hmaxDgonw/daSdNIwS9TY.jpg?size=604x604&quality=96&sign=05d74aafdd6bc896a69775eae0e61684&type=album) ; padding:20px 0px 10px 0px;">
+        <a href="" routerLink="/oceaniatours">  <h2 class="card-title  text-center ">Oceania</h2></a>
+      
+      </div>
+    
+    </div>
+</div>
+    </div>

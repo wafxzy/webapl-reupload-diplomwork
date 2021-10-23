@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import {SharedService} from 'src/app/shared.service';
 @Component({
   selector: 'app-alltours',
   templateUrl: './alltours.component.html',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlltoursComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:SharedService) { }
 
-  ngOnInit(): void {
+  AsiatoursList:any=[];
+  totallenght:any;
+  page:number=1;
+    ngOnInit(): void {
+      this.refreshAsiatours();
+    }
+  
+  refreshAsiatours(){
+    this.service.getAllList().subscribe(data=>{
+      this.AsiatoursList=data
+    this.totallenght=data.length
+    });
   }
 
 }

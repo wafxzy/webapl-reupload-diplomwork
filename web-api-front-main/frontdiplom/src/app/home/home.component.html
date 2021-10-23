@@ -48,52 +48,21 @@
     </div>
   </div>
   <!--end b2 and carousel-->
-  <section class="Hot-trips padding-lg ">
-    <div class="container-fluid ">
+  <section class="Hot-trips padding-lg">
+    <div class="container-fluid "> 
       <div class="row heading heading-icon">
           <h2>HOT-TOURS</h2>
       </div>
-    <div class="row d-flex justify-content-around ">
-      <div class="card col-md-2" style="width:20rem;">
-        <img class="card-img-top img-fluid" src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
+    <div class="row d-flex justify-content-around " >
+      <div class="card col-md-2" style="width:20rem;" *ngFor="let dataitem of AsiatoursList.slice(0, 5); ">
+        <img class="card-img-top img-fluid" style="height: 300px;" src="{{dataitem.photo1}}" alt="card image">
         <div class="card-body">
-        <h4 class="card-title">Card Title</h4>
-        <p class="card-text">This is basic card with image on top, title, description and button.</p>
-        <a href="#" class="btn btn-primary">Button</a>
+        <h4 class="card-title">{{dataitem.title}}</h4>
+        <p class="card-text">{{dataitem.price}}$ and {{dataitem.stars}} <i class="fa fa-star" aria-hidden="true"></i></p>
+        <a href="#" class="btn btn-primary" routerLink="/tour/{{dataitem.id_t}}">Info</a>
         </div>
         </div>
-        <div class="card col-md-2" style="width:20rem;">
-          <img class="card-img-top img-fluid" src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
-          <div class="card-body">
-          <h4 class="card-title">Card Title</h4>
-          <p class="card-text">This is basic card with image on top, title, description and button.</p>
-          <a href="#" class="btn btn-primary">Button</a>
-          </div>
-          </div>
-          <div class="card col-md-2" style="width:20rem;">
-            <img class="card-img-top img-fluid" src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
-            <div class="card-body">
-            <h4 class="card-title">Card Title</h4>
-            <p class="card-text">This is basic card with image on top, title, description and button.</p>
-            <a href="#" class="btn btn-primary">Button</a>
-            </div>
-            </div>
-        <div class="card col-md-2" style="width:20rem;">
-          <img class="card-img-top img-fluid" src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
-          <div class="card-body">
-          <h4 class="card-title">Card Title</h4>
-          <p class="card-text">This is basic card with image on top, title, description and button.</p>
-          <a href="#" class="btn btn-primary">Button</a>
-          </div>
-          </div>
-          <div class="card col-md-2" style="width:20rem;">
-            <img class="card-img-top " src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
-            <div class="card-body " >
-            <h4 class="card-title">Card Title</h4>
-            <p class="card-text">This is basic card with image on top, title, description and button.</p>
-            <a href="#" class="btn btn-primary">Button</a>
-            </div>
-            </div>            
+      
     </div>
     </div>
   </section>
@@ -122,31 +91,34 @@
     <div class="card card-pop col-md-2" style="width:20rem;">
       <img class="card-img-top cardpopimg " src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
       <div class="card-img-overlay ">
-        <h3 class="card-title  text-center ">Europe</h3>
+      <a href="" routerLink="/europetours">  <h3 class="card-title  text-center ">Europe</h3></a>
       </div>
     </div>      
       <div class="card card-pop col-md-2" style="width:20rem;">
-        <img class="card-img-top cardpopimg " src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
+        <img class="card-img-top cardpopimg " src="https://sun9-49.userapi.com/impf/c837621/v837621403/d18b/ykXHhpGq-iE.jpg?size=800x800&quality=96&sign=7f90de362f15b404681ed6244ec63ec6&type=album" alt="card image">
         <div class="card-img-overlay ">
-          <h3 class="card-title  text-center ">Asia</h3>
-        </div>
+          <a href="" routerLink="/asiatours">  <h3 class="card-title  text-center ">Asia</h3></a>
+              </div>
       </div>      
         <div class="card card-pop col-md-2" style="width:20rem;">
-          <img class="card-img-top cardpopimg " src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
+          <img class="card-img-top cardpopimg " src="https://sun9-77.userapi.com/impf/c637625/v637625174/1ecca/CkYrX0kM0Qc.jpg?size=1080x1080&quality=96&sign=24edb8bd637ddec1d9ab60ee8ecb0a1a&type=album" alt="card image">
           <div class="card-img-overlay ">
-            <h3 class="card-title  text-center ">North America</h3>
+            <a href="" routerLink="/northamericatours">  <h3 class="card-title  text-center ">North America</h3></a>
+      
           </div>
         </div>      
           <div class="card card-pop col-md-2" style="width:20rem;">
-            <img class="card-img-top cardpopimg " src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
+            <img class="card-img-top cardpopimg " src="https://sun9-71.userapi.com/impf/c629221/v629221028/4068a/HuMnYpIgmUI.jpg?size=1017x681&quality=96&sign=5d8b8637f83c05da950db7aae5748df9&type=album" alt="card image">
             <div class="card-img-overlay ">
-              <h3 class="card-title  text-center ">South America</h3>
+              <a href="" routerLink="/southamericatours">  <h3 class="card-title  text-center ">South America</h3></a>
+      
             </div>
           </div>      
         <div class="card card-pop col-md-2" style="width:20rem;">
-          <img class="card-img-top cardpopimg " src="https://sun9-22.userapi.com/impg/Z9FXuFzTeH5qSyBdM4M54-PxjeANjxETK_Le2w/Of5RV16Az7o.jpg?size=370x216&quality=96&sign=4987178f9d76abedb8596196cf4f251f&type=album" alt="card image">
+          <img class="card-img-top cardpopimg " src="https://sun9-21.userapi.com/impf/c638922/v638922539/56be/rXmwLV0NrOE.jpg?size=750x937&quality=96&sign=ccde89fc87e527f6d5a4b77e6c9620dc&type=album" alt="card image">
           <div class="card-img-overlay ">
-            <h3 class="card-title  text-center ">Africa</h3>
+            <a href="" routerLink="/africatours">  <h3 class="card-title  text-center ">Africa</h3></a>
+      
           </div>
         </div>            
   </div>
